@@ -1,0 +1,22 @@
+group 'MultipleChoicesTestMarking'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+/*    testCompile group: 'junit', name: 'junit', version: '4.11',
+            'com.github.stefanbirkner:system-rules:1.16.0'
+
+    def poiVersion = "3.14"
+    compile "org.apache.poi:poi:${poiVersion}"
+    compile "org.apache.poi:poi-ooxml:${poiVersion}"
+    compile "org.apache.poi:poi-scratchpad:${poiVersion}"*/
+
+    compile fileTree(dir: 'libs', include: '*.jar')
+    testCompile fileTree(dir: 'libs', include: '*.jar')
+}
